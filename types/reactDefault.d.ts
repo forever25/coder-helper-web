@@ -1,0 +1,3 @@
+interface DefaultFCProp {
+  props: any
+}
