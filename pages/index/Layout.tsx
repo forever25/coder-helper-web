@@ -1,6 +1,5 @@
 import { FC } from 'react'
 
-import './Layout.css'
 
 
 const Layout: FC<any> = ({ children }) => {
