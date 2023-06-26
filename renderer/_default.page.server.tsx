@@ -6,7 +6,7 @@ import type { PageContextBuiltInClientWithClientRouting } from 'vite-plugin-ssr/
 
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ['pageProps', 'routeParams']
-async function render(pageContext: PageContextBuiltInClientWithClientRouting) {
+async function render(pageContext: any) {
   const { Page, pageProps } = pageContext
 
   const pageHtml = renderToString(

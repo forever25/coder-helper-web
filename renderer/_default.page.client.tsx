@@ -8,7 +8,6 @@ import { PageShell } from './PageShell'
 
 let reactRoot: Root
 async function render(pageContext: any) {
-  console.log(pageContext)
   const { Page, pageProps } = pageContext
 
   const page = (
