@@ -2,7 +2,7 @@
 import { renderToString } from 'react-dom/server'
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
 import { PageShell } from './PageShell'
-import type { PageContextBuiltInClientWithClientRouting } from 'vite-plugin-ssr/types'
+import logoIconSvg from '@r/assets/images/logo-icon.svg?url'
 
 // See https://vite-plugin-ssr.com/data-fetching
 const passToClient = ['pageProps', 'routeParams']
@@ -19,6 +19,7 @@ async function render(pageContext: any) {
     <html>
       <head>
         <meta charset="utf-8">
+        <link rel="icon" href="${logoIconSvg}" />
       </head>
       <body>
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>
