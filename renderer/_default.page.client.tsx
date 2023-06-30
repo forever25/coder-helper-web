@@ -10,6 +10,7 @@ let reactRoot: Root
 async function render(pageContext: any) {
   const { Page, pageProps } = pageContext
 
+
   const page = (
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
@@ -27,6 +28,7 @@ async function render(pageContext: any) {
     }
     reactRoot.render(page)
   }
+
 }
 
 

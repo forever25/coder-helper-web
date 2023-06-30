@@ -1,5 +1,5 @@
 import { FC, StrictMode } from 'react'
-import { LayoutDefault } from '@r/layout/LayoutDefault'
+import { LayoutDefault } from './LayoutDefault'
 import { PageContextProvider } from './usePageContext'
 import { PageContext } from "./types"
 
