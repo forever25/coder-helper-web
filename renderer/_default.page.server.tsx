@@ -25,7 +25,7 @@ async function render(pageContext: any) {
         <meta name="description" content="${description}">
         <meta name="keywords" content="${keywords}">
         <meta charset="utf-8">
-        <link rel="icon" href="/logo-icon.svg" />
+        <link rel="icon" href="/logo.svg" />
       </head>
       <body>
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>

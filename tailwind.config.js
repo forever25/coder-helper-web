@@ -7,12 +7,12 @@ export default {
   daisyui: {
     themes: [{
       default: {
-        "primary": "#566E58",
-        "secondary": "#32c162",
-        "accent": "#1b1f99",
-        "neutral": "#2d2938",
+        "primary": "#e74645",
+        "secondary": "#fb7756",
+        "accent": "#facd60",
+        "neutral": "#fdfa66",
         "base-100": "#ffffff",
-        "info": "#8aa2e0",
+        "info": "#1ac0c6",
         "success": "#49e99e",
         "warning": "#977f11",
         "error": "#f54d5d",
