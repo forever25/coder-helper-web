@@ -1,4 +1,5 @@
 import { DefaultHeader } from "./Header"
+import { DefaultFooter } from "./Footer"
 
 interface LayoutDefaultProps {
   children: any
@@ -9,10 +10,11 @@ function LayoutDefault({ children }: LayoutDefaultProps) {
     <>
       <DefaultHeader></DefaultHeader>
       <div className="mt-[-4rem] pt-16">
-        {/* <div className="md:container m-auto"> */}
+        {/* <div className="m-auto md:container"> */}
           {children}
         {/* </div> */}
       </div>
+      <DefaultFooter></DefaultFooter>
     </>
   )
 }

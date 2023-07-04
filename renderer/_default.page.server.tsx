@@ -22,6 +22,7 @@ async function render(pageContext: any) {
     <html data-theme="default">
       <head>
         <title>${title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="${description}">
         <meta name="keywords" content="${keywords}">
         <meta charset="utf-8">

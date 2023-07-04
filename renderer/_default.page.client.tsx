@@ -5,6 +5,7 @@ import { PageShell } from './PageShell'
 import { Analytics } from '@vercel/analytics/react'
 
 import "./styles/index.css"
+import "./styles/animation.css"
 
 let reactRoot: Root
 async function render(pageContext: any) {

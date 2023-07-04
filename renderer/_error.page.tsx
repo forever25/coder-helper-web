@@ -1,4 +1,4 @@
-export { Page }
+
 
 function Page(pageProps: any) {
   if (pageProps.is404) {
@@ -11,5 +11,9 @@ function Page(pageProps: any) {
 
 
 function PageNotFound() {
-  return <a>404</a>
+  return <div className="w-1/2 mx-auto">
+    <img src="/404.svg" alt="404" />
+  </div>
 }
+
+export { Page }
