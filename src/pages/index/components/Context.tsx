@@ -21,12 +21,12 @@ function ToolContext() {
     <div className="mt-4">
       <h2>文本工具</h2>
       <div className="flex flex-wrap justify-between">
+        {/* <ToolCard></ToolCard>
         <ToolCard></ToolCard>
         <ToolCard></ToolCard>
         <ToolCard></ToolCard>
         <ToolCard></ToolCard>
-        <ToolCard></ToolCard>
-        <ToolCard></ToolCard>
+        <ToolCard></ToolCard> */}
         <div className="h-0 w-80"></div>
         <div className="h-0 w-80"></div>
         <div className="h-0 w-80"></div>
