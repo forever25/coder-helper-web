@@ -1,19 +1,16 @@
-
 import { renderToString } from 'react-dom/server'
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
 import { PageShell } from './PageShell'
+import { PageContext } from './types'
+import { Provider } from 'react-redux'
+import { getStore } from '@/store/index'
 
 // See https://vite-plugin-ssr.com/data-fetching
-const passToClient = ['pageProps', 'routeParams']
+const passToClient = ['pageProps', 'routeParams', 'PRELOADED_STATE']
 async function render(pageContext: any) {
-  const { Page, pageProps } = pageContext
-  const { documentProps } = pageContext.exports;
+  const { documentProps } = pageContext.exports
+  const { pageHtml } = pageContext
 
-  const pageHtml = renderToString(
-    <PageShell pageContext={pageContext}>
-      <Page {...pageProps} />
-    </PageShell>
-  )
   const title = documentProps?.title
   const description = documentProps?.description
   const keywords = documentProps?.keywords
@@ -34,5 +31,29 @@ async function render(pageContext: any) {
     </html>`
 }
 
+function onBeforeRender(pageContext: PageContext) {
+  const store = getStore()
+
+  const { Page, pageProps } = pageContext
+
+  const pageHtml = renderToString(
+    <Provider store={store}>
+      <PageShell pageContext={pageContext}>
+        <Page {...pageProps} />
+      </PageShell>
+    </Provider>
+  )
+
+  const PRELOADED_STATE = store.getState()
+
+  return {
+    pageContext: {
+      PRELOADED_STATE,
+      pageHtml
+    }
+  }
+}
+
 export { render }
 export { passToClient }
+export { onBeforeRender }

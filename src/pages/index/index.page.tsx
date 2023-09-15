@@ -1,3 +1,7 @@
+import { useContext } from 'react'
+import { ReactReduxContext } from 'react-redux'
+import { useSelector } from 'react-redux'
+
 import { Search } from './components/Search'
 import { ContextWrapper } from './components/Context'
 import { documentTitle } from '@/config/systemConfig'
